@@ -1,0 +1,167 @@
+# Apple Silicon (arm64) Compatibility:
+# All base images used in this compose file are multi-architecture and support
+# both linux/amd64 and linux/arm64 natively. No `platform: linux/amd64` override
+# is needed — Docker Desktop on Apple Silicon (M1/M2/M3) will pull the native
+# arm64 variants automatically.
+#
+# Base images verified for arm64 support:
+#   - postgres:15-alpine (amd64, arm64)
+#   - redis:7-alpine (amd64, arm64)
+#   - python:3.11-slim (amd64, arm64) — used in nepse_backend/Dockerfile
+#   - node:18-alpine (amd64, arm64) — used in nepse_frontend/Dockerfile
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: nepse-postgres
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-nepse_db}
+      - POSTGRES_USER=${POSTGRES_USER:-nepse_user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-nepse_pass}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - nepse_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-nepse_user} -d ${POSTGRES_DB:-nepse_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Redis Message Broker & Result Backend
+  redis:
+    image: redis:7-alpine
+    container_name: nepse-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - nepse_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Django Backend
+  backend:
+    build:
+      context: ./nepse_backend
+      dockerfile: Dockerfile
+    container_name: nepse-backend
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./nepse_backend:/app
+      - backend_staticfiles:/app/staticfiles
+      - backend_media:/app/media
+    networks:
+      - nepse_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import socket; socket.create_connection(('127.0.0.1', 8000), timeout=1)\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # Celery Worker
+  celery_worker:
+    build:
+      context: ./nepse_backend
+      dockerfile: Dockerfile
+    container_name: nepse-celery-worker
+    command: celery -A config worker --loglevel=info
+    env_file:
+      - .env
+    volumes:
+      - ./nepse_backend:/app
+    networks:
+      - nepse_network
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  # Celery Beat Scheduler
+  celery_beat:
+    build:
+      context: ./nepse_backend
+      dockerfile: Dockerfile
+    container_name: nepse-celery-beat
+    command: celery -A config beat --loglevel=info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    env_file:
+      - .env
+    volumes:
+      - ./nepse_backend:/app
+    networks:
+      - nepse_network
+    depends_on:
+      backend:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  # Flower Monitoring Dashboard
+  flower:
+    build:
+      context: ./nepse_backend
+      dockerfile: Dockerfile
+    container_name: nepse-flower
+    command: celery -A config flower --port=5555 --basic_auth=admin:admin@123
+    ports:
+      - "5555:5555"
+    env_file:
+      - .env
+    volumes:
+      - ./nepse_backend:/app
+    networks:
+      - nepse_network
+    restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  # React Frontend
+  frontend:
+    build:
+      context: ./nepse_frontend
+      dockerfile: Dockerfile.dev
+    container_name: nepse-frontend
+    command: npm run dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./nepse_frontend:/app
+      - /app/node_modules
+    networks:
+      - nepse_network
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  redis_data:
+  backend_staticfiles:
+  backend_media:
+
+networks:
+  nepse_network:
+    driver: bridge

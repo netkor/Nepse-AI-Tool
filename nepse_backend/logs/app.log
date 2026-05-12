@@ -1,0 +1,357 @@
+{"timestamp": "2026-05-12 07:46:14", "level": "ERROR", "logger": "django.request", "message": "Internal Server Error: /admin/login/", "lineno": 241}
+Traceback (most recent call last):
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/test/utils.py", line 110, in instrumented_test_render
+    template_rendered.send(sender=self, template=self, context=context)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/test/client.py", line 275, in store_rendered_templates
+    store["context"].append(copy(context))
+                            ~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/copy.py", line 82, in copy
+    return copier(x)
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/context.py", line 158, in __copy__
+    duplicate = super().__copy__()
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/context.py", line 39, in __copy__
+    duplicate.dicts = self.dicts[:]
+    ^^^^^^^^^^^^^^^
+AttributeError: 'super' object has no attribute 'dicts' and no __dict__ for setting new attributes
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "config.exceptions", "message": "API error in watchlist: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/alerts/watchlist/", "lineno": 241}
+{"timestamp": "2026-05-12 07:46:14", "level": "ERROR", "logger": "django.request", "message": "Internal Server Error: /api/auth/", "lineno": 241}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "config.exceptions", "message": "API error in MarketSummaryView: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/insights/market-summary/", "lineno": 241}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "config.exceptions", "message": "API error in SignalViewSet: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/signals/", "lineno": 241}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "config.exceptions", "message": "API error in StockViewSet: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 07:46:14", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/stocks/", "lineno": 241}
+{"timestamp": "2026-05-12 08:05:01", "level": "ERROR", "logger": "django.request", "message": "Internal Server Error: /admin/login/", "lineno": 241}
+Traceback (most recent call last):
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/test/utils.py", line 110, in instrumented_test_render
+    template_rendered.send(sender=self, template=self, context=context)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/dispatch/dispatcher.py", line 189, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/test/client.py", line 275, in store_rendered_templates
+    store["context"].append(copy(context))
+                            ~~~~^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/copy.py", line 82, in copy
+    return copier(x)
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/context.py", line 158, in __copy__
+    duplicate = super().__copy__()
+  File "/Users/netrakoirala/dev/ai agents dev/nepse ai tool/nepse_backend/.venv/lib/python3.14/site-packages/django/template/context.py", line 39, in __copy__
+    duplicate.dicts = self.dicts[:]
+    ^^^^^^^^^^^^^^^
+AttributeError: 'super' object has no attribute 'dicts' and no __dict__ for setting new attributes
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "config.exceptions", "message": "API error in watchlist: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/alerts/watchlist/", "lineno": 241}
+{"timestamp": "2026-05-12 08:05:01", "level": "ERROR", "logger": "django.request", "message": "Internal Server Error: /api/auth/", "lineno": 241}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "config.exceptions", "message": "API error in MarketSummaryView: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/insights/market-summary/", "lineno": 241}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "config.exceptions", "message": "API error in SignalViewSet: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/signals/", "lineno": 241}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "config.exceptions", "message": "API error in StockViewSet: Authentication credentials were not provided.", "lineno": 188}
+{"timestamp": "2026-05-12 08:05:01", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/stocks/", "lineno": 241}
+{"timestamp": "2026-05-12 08:39:03", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 08:41:02", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 08:43:35", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 08:44:38", "level": "INFO", "logger": "django.server", "message": "code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x06')", "lineno": 212}
+{"timestamp": "2026-05-12 08:44:38", "level": "ERROR", "logger": "django.server", "message": "You're accessing the development server over HTTPS, but it only supports HTTP.", "lineno": 192}
+{"timestamp": "2026-05-12 08:44:38", "level": "INFO", "logger": "django.server", "message": "code 400, message Bad request version ('¿v\x86\x04º')", "lineno": 212}
+{"timestamp": "2026-05-12 08:44:38", "level": "ERROR", "logger": "django.server", "message": "You're accessing the development server over HTTPS, but it only supports HTTP.", "lineno": 192}
+{"timestamp": "2026-05-12 08:44:39", "level": "WARNING", "logger": "django.request", "message": "Not Found: /", "lineno": 241}
+{"timestamp": "2026-05-12 08:44:39", "level": "WARNING", "logger": "django.server", "message": ""GET / HTTP/1.1" 404 2850", "lineno": 212}
+{"timestamp": "2026-05-12 08:44:39", "level": "WARNING", "logger": "django.request", "message": "Not Found: /favicon.ico", "lineno": 241}
+{"timestamp": "2026-05-12 08:44:39", "level": "WARNING", "logger": "django.server", "message": ""GET /favicon.ico HTTP/1.1" 404 2901", "lineno": 212}
+{"timestamp": "2026-05-12 08:53:23", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 08:56:42", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:01:47", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [e06a4c53-ec86-4589-bace-77b8c85e40d2] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:01:47", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:01:47", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [e06a4c53-ec86-4589-bace-77b8c85e40d2] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:03:58", "level": "WARNING", "logger": "django.request", "message": "Not Found: /", "lineno": 241}
+{"timestamp": "2026-05-12 09:03:58", "level": "WARNING", "logger": "django.server", "message": ""GET / HTTP/1.1" 404 2850", "lineno": 212}
+{"timestamp": "2026-05-12 09:04:38", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:04:38", "level": "WARNING", "logger": "django.request", "message": "Not Found: /", "lineno": 241}
+{"timestamp": "2026-05-12 09:04:38", "level": "WARNING", "logger": "django.server", "message": ""GET / HTTP/1.1" 404 2852", "lineno": 212}
+{"timestamp": "2026-05-12 09:04:38", "level": "WARNING", "logger": "django.request", "message": "Not Found: /favicon.ico", "lineno": 241}
+{"timestamp": "2026-05-12 09:04:38", "level": "WARNING", "logger": "django.server", "message": ""GET /favicon.ico HTTP/1.1" 404 2903", "lineno": 212}
+{"timestamp": "2026-05-12 09:05:03", "level": "WARNING", "logger": "django.request", "message": "Not Found: /", "lineno": 241}
+{"timestamp": "2026-05-12 09:05:03", "level": "WARNING", "logger": "django.server", "message": ""GET / HTTP/1.1" 404 2852", "lineno": 212}
+{"timestamp": "2026-05-12 09:06:47", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [6cb25757-0bb9-49bd-ab19-2df64d441762] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:06:47", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:06:47", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [6cb25757-0bb9-49bd-ab19-2df64d441762] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:10:39", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:11:47", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [311381cb-8b5f-4719-b2d3-eef554f1b68d] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:11:47", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:11:47", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [311381cb-8b5f-4719-b2d3-eef554f1b68d] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:12:33", "level": "WARNING", "logger": "django.request", "message": "Not Found: /", "lineno": 241}
+{"timestamp": "2026-05-12 09:12:33", "level": "WARNING", "logger": "django.server", "message": ""GET / HTTP/1.1" 404 2852", "lineno": 212}
+{"timestamp": "2026-05-12 09:16:26", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:19:03", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:20:21", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:21:01", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:22:07", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /admin HTTP/1.1" 301 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /admin/ HTTP/1.1" 302 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2682", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/css/base.css HTTP/1.1" 200 21544", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/css/login.css HTTP/1.1" 200 958", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/css/responsive.css HTTP/1.1" 200 17905", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/js/theme.js HTTP/1.1" 200 1943", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:27", "level": "WARNING", "logger": "django.request", "message": "Not Found: /favicon.ico", "lineno": 241}
+{"timestamp": "2026-05-12 09:22:27", "level": "WARNING", "logger": "django.server", "message": ""GET /favicon.ico HTTP/1.1" 404 2903", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:35", "level": "INFO", "logger": "django.server", "message": ""POST /admin/login/?next=/admin/ HTTP/1.1" 200 4319", "lineno": 212}
+{"timestamp": "2026-05-12 09:22:44", "level": "INFO", "logger": "django.server", "message": ""POST /admin/login/?next=/admin/ HTTP/1.1" 200 4320", "lineno": 212}
+{"timestamp": "2026-05-12 09:23:41", "level": "INFO", "logger": "django.server", "message": ""GET /admin/ HTTP/1.1" 302 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:23:41", "level": "INFO", "logger": "django.server", "message": ""GET /admin/login/?next=/admin/ HTTP/1.1" 200 4158", "lineno": 212}
+{"timestamp": "2026-05-12 09:24:58", "level": "INFO", "logger": "django.server", "message": ""POST /admin/login/?next=/admin/ HTTP/1.1" 302 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:24:58", "level": "INFO", "logger": "django.server", "message": ""GET /admin/ HTTP/1.1" 200 12636", "lineno": 212}
+{"timestamp": "2026-05-12 09:24:58", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/css/dashboard.css HTTP/1.1" 200 441", "lineno": 212}
+{"timestamp": "2026-05-12 09:24:58", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331", "lineno": 212}
+{"timestamp": "2026-05-12 09:24:58", "level": "INFO", "logger": "django.server", "message": ""GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380", "lineno": 212}
+{"timestamp": "2026-05-12 09:27:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [f1a6096e-b530-49e3-bd1b-d16b857e429a] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:27:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:27:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [f1a6096e-b530-49e3-bd1b-d16b857e429a] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:28:18", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:28:53", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/auth/login/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:28:53", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 09:28:53", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 09:28:53", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 09:32:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [dbbfa74c-57eb-4a82-ba97-3dedd1e8d540] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:32:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:32:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [dbbfa74c-57eb-4a82-ba97-3dedd1e8d540] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:37:12", "level": "DEBUG", "logger": "config.celery", "message": "Task signals.tasks.generate_signals [41d3c35b-519e-4716-a33c-d698adcfec26] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:37:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [b185bd7a-aae0-403e-83b1-d0b1b6c734b1] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:37:12", "level": "ERROR", "logger": "signals.tasks", "message": "Critical error in generate_signals: No module named 'signals.services.models'", "lineno": 98}
+Traceback (most recent call last):
+  File "/app/signals/tasks.py", line 39, in generate_signals
+    from signals.services import SignalService
+  File "/app/signals/services/__init__.py", line 7, in <module>
+    from .signal_service import SignalService, SignalPerformanceService
+  File "/app/signals/services/signal_service.py", line 17, in <module>
+    from .models import SignalHistory, SignalPerformance
+ModuleNotFoundError: No module named 'signals.services.models'
+{"timestamp": "2026-05-12 09:37:12", "level": "DEBUG", "logger": "config.celery", "message": "Task signals.tasks.generate_signals [41d3c35b-519e-4716-a33c-d698adcfec26] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:37:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:37:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [b185bd7a-aae0-403e-83b1-d0b1b6c734b1] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:39:57", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 09:42:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [4a01963d-d11d-4f94-9fd0-86548656d102] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:42:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:42:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [4a01963d-d11d-4f94-9fd0-86548656d102] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:47:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [feb3f6e6-73f8-47fb-abab-ca7955da38f7] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:47:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:47:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [feb3f6e6-73f8-47fb-abab-ca7955da38f7] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:52:12", "level": "DEBUG", "logger": "config.celery", "message": "Task signals.tasks.generate_signals [1b1a85c2-be23-4e0b-9f03-bea05f70af00] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:52:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [177a6780-246d-4a45-b6ca-7468a9c0e6fa] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:52:12", "level": "ERROR", "logger": "signals.tasks", "message": "Critical error in generate_signals: No module named 'signals.services.models'", "lineno": 98}
+Traceback (most recent call last):
+  File "/app/signals/tasks.py", line 39, in generate_signals
+    from signals.services import SignalService
+  File "/app/signals/services/__init__.py", line 7, in <module>
+    from .signal_service import SignalService, SignalPerformanceService
+  File "/app/signals/services/signal_service.py", line 17, in <module>
+    from .models import SignalHistory, SignalPerformance
+ModuleNotFoundError: No module named 'signals.services.models'
+{"timestamp": "2026-05-12 09:52:12", "level": "DEBUG", "logger": "config.celery", "message": "Task signals.tasks.generate_signals [1b1a85c2-be23-4e0b-9f03-bea05f70af00] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:52:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:52:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [177a6780-246d-4a45-b6ca-7468a9c0e6fa] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:56:21", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/auth/register/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:56:22", "level": "INFO", "logger": "django.server", "message": ""POST /api/auth/register/ HTTP/1.1" 201 121", "lineno": 212}
+{"timestamp": "2026-05-12 09:57:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [429d6c43-8c0f-40e2-bea3-2a6635e97ecd] started", "lineno": 46}
+{"timestamp": "2026-05-12 09:57:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 09:57:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [429d6c43-8c0f-40e2-bea3-2a6635e97ecd] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 09:57:17", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/auth/login/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 09:57:18", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 09:57:18", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 09:57:18", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 09:58:50", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 09:58:50", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 09:58:50", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 10:02:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [9b2b8929-8dd5-4e51-a6e8-d43b47b54cb8] started", "lineno": 46}
+{"timestamp": "2026-05-12 10:02:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 10:02:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [9b2b8929-8dd5-4e51-a6e8-d43b47b54cb8] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 10:02:50", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 10:02:50", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 10:02:50", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 10:03:04", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 10:03:04", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 10:03:04", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 10:03:19", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 10:03:19", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 10:03:19", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 10:03:23", "level": "WARNING", "logger": "config.exceptions", "message": "API error in CustomTokenObtainPairView: No active account found with the given credentials", "lineno": 188}
+{"timestamp": "2026-05-12 10:03:23", "level": "WARNING", "logger": "django.request", "message": "Unauthorized: /api/auth/login/", "lineno": 241}
+{"timestamp": "2026-05-12 10:03:23", "level": "WARNING", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 401 111", "lineno": 212}
+{"timestamp": "2026-05-12 10:06:20", "level": "INFO", "logger": "django.utils.autoreload", "message": "/app/accounts/views.py changed, reloading.", "lineno": 266}
+{"timestamp": "2026-05-12 10:06:20", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 10:06:23", "level": "INFO", "logger": "django.utils.autoreload", "message": "/app/accounts/views.py changed, reloading.", "lineno": 266}
+{"timestamp": "2026-05-12 10:06:23", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 10:07:09", "level": "INFO", "logger": "django.utils.autoreload", "message": "Watching for file changes with StatReloader", "lineno": 668}
+{"timestamp": "2026-05-12 10:07:12", "level": "DEBUG", "logger": "config.celery", "message": "Task signals.tasks.generate_signals [b3803c02-b8df-4a5c-8cab-689354d3d09e] started", "lineno": 46}
+{"timestamp": "2026-05-12 10:07:12", "level": "ERROR", "logger": "signals.tasks", "message": "Critical error in generate_signals: No module named 'signals.services.models'", "lineno": 98}
+Traceback (most recent call last):
+  File "/app/signals/tasks.py", line 39, in generate_signals
+    from signals.services import SignalService
+  File "/app/signals/services/__init__.py", line 7, in <module>
+    from .signal_service import SignalService, SignalPerformanceService
+  File "/app/signals/services/signal_service.py", line 17, in <module>
+    from .models import SignalHistory, SignalPerformance
+ModuleNotFoundError: No module named 'signals.services.models'
+{"timestamp": "2026-05-12 10:07:12", "level": "DEBUG", "logger": "config.celery", "message": "Task signals.tasks.generate_signals [b3803c02-b8df-4a5c-8cab-689354d3d09e] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 10:07:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [8fc058ae-a937-43a2-8db2-a65edbf411c1] started", "lineno": 46}
+{"timestamp": "2026-05-12 10:07:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 10:07:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [8fc058ae-a937-43a2-8db2-a65edbf411c1] completed: None", "lineno": 52}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 200 627", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/auth/profile/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/auth/profile/ HTTP/1.1" 200 388", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/stocks/statistics/overview/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/stocks/?limit=5 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=10 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=10 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/stocks/statistics/overview/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/stocks/?limit=5 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:07:59", "level": "INFO", "logger": "django.server", "message": ""POST /api/auth/register/ HTTP/1.1" 201 122", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""POST /api/auth/login/ HTTP/1.1" 200 630", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/auth/profile/ HTTP/1.1" 200 388", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:10", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/alerts/watchlist/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/stocks/?limit=100 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/alerts/watchlist/ HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/stocks/?limit=100 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:18", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:28", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:28", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:28", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:28", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:31", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&signal_type=BUY HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:31", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&signal_type=BUY HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:34", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:34", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:34", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:34", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:35", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:35", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:35", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:35", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:35", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:35", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:41", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:42", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:42", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:42", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:42", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:42", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:42", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:43", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:43", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:43", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:43", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:43", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:43", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:44", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:45", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:46", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:46", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:46", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:46", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:46", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=5 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=10 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:47", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/statistics/overview/ HTTP/1.1" 200 109", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:48", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:48", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:48", "level": "INFO", "logger": "django.server", "message": ""GET /api/stocks/?limit=100 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:48", "level": "INFO", "logger": "django.server", "message": ""GET /api/alerts/watchlist/ HTTP/1.1" 200 146", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:48", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:48", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:52", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&min_confidence=1 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:52", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&min_confidence=1 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:53", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&min_confidence=37 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:53", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&min_confidence=37 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:54", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&min_confidence=38 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:54", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&min_confidence=38 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:55", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&min_confidence=72 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:55", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&min_confidence=72 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:56", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&min_confidence=88 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:56", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&min_confidence=88 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:57", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&min_confidence=87 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:08:57", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&min_confidence=87 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:09:00", "level": "INFO", "logger": "django.server", "message": ""OPTIONS /api/signals/?limit=50&signal_type=BUY&min_confidence=87 HTTP/1.1" 200 0", "lineno": 212}
+{"timestamp": "2026-05-12 10:09:00", "level": "INFO", "logger": "django.server", "message": ""GET /api/signals/?limit=50&signal_type=BUY&min_confidence=87 HTTP/1.1" 200 52", "lineno": 212}
+{"timestamp": "2026-05-12 10:12:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [c9d5b27c-aa0a-4a62-ade9-f0cac67c6ce0] started", "lineno": 46}
+{"timestamp": "2026-05-12 10:12:12", "level": "INFO", "logger": "alerts.tasks", "message": "check_price_alerts: triggered=0", "lineno": 66}
+{"timestamp": "2026-05-12 10:12:12", "level": "DEBUG", "logger": "config.celery", "message": "Task alerts.tasks.check_price_alerts [c9d5b27c-aa0a-4a62-ade9-f0cac67c6ce0] completed: None", "lineno": 52}
