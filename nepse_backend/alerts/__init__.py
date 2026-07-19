@@ -1,1 +1,1 @@
-# Alerts app
+# alerts app package

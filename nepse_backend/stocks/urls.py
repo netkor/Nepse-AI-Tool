@@ -1,17 +1,16 @@
-"""
-URL configuration for Stocks app.
-"""
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from . import views
-
-app_name = 'stocks'
-
-router = DefaultRouter()
-router.register(r'', views.StockViewSet, basename='stock')
+from django.urls import path
+from .views import (
+    StockListView, StockHistoryView, PortfolioListCreateView, PortfolioDetailView,
+    StockFundamentalsView, SectorSummaryView, PortfolioRiskView
+)
 
 urlpatterns = [
-    path('', include(router.urls)),
-    path('<str:symbol>/history/', views.stock_history, name='stock_history'),
-    path('statistics/overview/', views.stock_statistics, name='stock_statistics'),
+    path('', StockListView.as_view(), name='stock_list'),
+    path('sectors/summary/', SectorSummaryView.as_view(), name='sector_summary'),
+    path('<str:symbol>/history/', StockHistoryView.as_view(), name='stock_history'),
+    path('<str:symbol>/fundamentals/', StockFundamentalsView.as_view(), name='stock_fundamentals'),
+    path('portfolio/', PortfolioListCreateView.as_view(), name='portfolio_list'),
+    path('portfolio/risk/', PortfolioRiskView.as_view(), name='portfolio_risk'),
+    path('portfolio/<int:pk>/', PortfolioDetailView.as_view(), name='portfolio_detail'),
 ]
+

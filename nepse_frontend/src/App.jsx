@@ -1,60 +1,51 @@
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
-import { AuthProvider } from './context/AuthContext'
-import Navigation from './components/Navigation'
-import ProtectedRoute from './components/ProtectedRoute'
-import AppShell from './components/AppShell'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
+import StockDetail from './pages/StockDetail';
+import WatchlistAlerts from './pages/WatchlistAlerts';
+import Portfolio from './pages/Portfolio';
+import Scanners from './pages/Scanners';
 
-// Pages
-import LoginPage from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
-import DashboardPage from './pages/DashboardPage'
-import WatchlistPage from './pages/WatchlistPage'
-import SignalsPage from './pages/SignalsPage'
-
-function App() {
-    return (
-        <Router>
-            <AuthProvider>
-                <AppShell>
-                    <div className="min-h-screen">
-                        <Navigation />
-                        <Routes>
-                            <Route path="/login" element={<LoginPage />} />
-                            <Route path="/register" element={<RegisterPage />} />
-
-                            <Route
-                                path="/dashboard"
-                                element={
-                                    <ProtectedRoute>
-                                        <DashboardPage />
-                                    </ProtectedRoute>
-                                }
-                            />
-                            <Route
-                                path="/watchlist"
-                                element={
-                                    <ProtectedRoute>
-                                        <WatchlistPage />
-                                    </ProtectedRoute>
-                                }
-                            />
-                            <Route
-                                path="/signals"
-                                element={
-                                    <ProtectedRoute>
-                                        <SignalsPage />
-                                    </ProtectedRoute>
-                                }
-                            />
-
-                            <Route path="/" element={<Navigate to="/dashboard" replace />} />
-                        </Routes>
-                    </div>
-                </AppShell>
-            </AuthProvider>
-        </Router>
-    )
+// Protected Route wrapper component
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem('access_token');
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+  return children;
 }
 
-export default App
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Public Login Route */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected Application Layout */}
+        <Route 
+          path="/*" 
+          element={
+            <ProtectedRoute>
+              <div className="app-container">
+                <Navigation />
+                <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                  <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/stock/:symbol" element={<StockDetail />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/scanners" element={<Scanners />} />
+                    <Route path="/watchlist" element={<WatchlistAlerts />} />
+                    <Route path="*" element={<Navigate to="/" replace />} />
+                  </Routes>
+                </div>
+              </div>
+            </ProtectedRoute>
+          } 
+        />
+      </Routes>
+    </Router>
+  );
+}

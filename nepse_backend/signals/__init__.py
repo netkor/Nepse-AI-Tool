@@ -1,1 +1,1 @@
-# Signals app
+# signals app package

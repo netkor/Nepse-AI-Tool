@@ -1,1 +1,1 @@
-# Stocks app
+# stocks app
